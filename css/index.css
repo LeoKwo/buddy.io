@@ -1,0 +1,53 @@
+#loginComponent {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 5em;
+  margin-top: 5em;
+  background-color: rgba(255,255,255,.3);
+  border-radius: 20px
+}
+
+#buddyioLogo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.accountButton {
+  width: 100%;
+}
+
+#loginButton {
+  background-color: #F76900;
+  border-color: #F76900;
+}
+
+#newAccountButton {
+  background-color: #000E54;
+  border-color: #000E54;
+}
+
+body, html {
+  height: 100%;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+}
+
+.bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("../img/loginBG.jpeg");
+  filter: blur(50px);
+  /* filter: grayscale(100%); */
+}
+.bg-inside {
+  position: relative;
+}
