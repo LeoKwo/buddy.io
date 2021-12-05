@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/coursePage.css" rel="stylesheet">
+  <title>Course Page</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <img src="img/buddy.io.png" id="logo" margin/>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="academia.html">Academia<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="campuslife.html">Campus Life<span class="sr-only"></span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="courseInfo">
+    <h1 id="courseName">Course Name</h1>
+    <h5 id="courseName">Autumn 2021</h5>
+    <p id="courseDescription">Course description is basically a course description of the course that you are taking. It describes the course and tell you about the course.</p>
+  </div>
+
+
+
+
+  <div id="pageContent">
+
+  <div id="posts">
+    <div class="card" id="coursePostPinned">
+      <div class="card-header coursePostPinnedInfo" style="background-color:#fafafa">
+        Important
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">COVID-19 Update: Please Read!</h5>
+        <p class="card-text">You may have been in contact with a confimed COVID-19 positive patient.</p>
+        <button href="#" class="btn btn-primary" style="background-color:#000E54">View message</button>
+      </div>
+    </div>
+
+    <div class="card" id="regularPosts">
+      <div class="card-header" id="postInteraction" style="display:flex; flow-direction:row;">
+        <form id="searchBox">
+          <div id="searchInput">
+            <input type="text" class="form-control" placeholder="What are looking for"/>
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+        </form>
+        <button id="newPost">
+          <i class="fas fa-pen"></i>
+        </button>
+      </div>
+      <a class="card-body userPosts" href="post.html">
+        <h5 class="card-title">Homework 5 need help!</h5>
+        <p class="timePosted" style="font-size:x-small"> 30 seconds before </p>
+        <p class="card-text">So I never go to class but hw5 is due tmr. Please someone help!
+        </p>
+      </a>
+      <hr>
+      <a class="card-body userPosts" href="post.html">
+        <h5 class="card-title">Anybody looking for their phone?</h5>
+        <p class="timePosted" style="font-size:x-small"> 1 hour before </p>
+        <p class="card-text">I found an iPhone burning in the sink...
+        </p>
+      </a>
+      <hr>
+      <a class="card-body userPosts" href="post.html">
+        <h5 class="card-title">The third post</h5>
+        <p class="timePosted" style="font-size:x-small"> 2 hours before </p>
+        <p class="card-text">I am running out of words to say...
+        </p>
+      </a>
+    </div>
+
+  </div>
+
+  <div id="sideCards">
+    <div class="card" id="rateMyProfessorCard">
+      <div class="card-header" style="background-color:#fafafa">
+        <h2>Rate My Professor</h2>
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Your instructors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Other instructors  <i class="fas fa-link"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <ul class="list-group list-group-flush rateMyProfessorList">
+          <li class="list-group-item" >
+            <a href="..." style="color:#000E54">
+              CIS 623: Andrew Lee
+              <div style="float:right">
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="far fa-star" style="color:#F76900"></i>
+              </div>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="..." style="color:#000E54">
+              CIS 655: Ercanli
+              <div style="float:right">
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="far fa-star" style="color:#F76900"></i>
+              </div>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="professorRating" style="color:#000E54">
+              CSE 687: Edmund Yu
+              <div style="float:right">
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star" style="color:#F76900"></i>
+                <i class="fas fa-star-half-alt" style="color:#F76900"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+</body>
+
+</html>
