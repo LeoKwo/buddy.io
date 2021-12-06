@@ -1,0 +1,28 @@
+#searchButton {
+  background-color: #000E54
+}
+
+#searchBox {
+  width: 30%!important;
+  /* margin-right: 0; */
+}
+
+#searchLogo {
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#searchOutside{
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  margin-top: 3em;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

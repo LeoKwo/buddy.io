@@ -27,8 +27,8 @@ function login() {
   const email = $("#email").val();
   const password = $("#password").val();
   // socket.send(email);
-  socket.send(email);
+  // socket.send(email);
   // console.log(email);
-  // $("#testH1").html(email);
+  $("#testH1").html(email);
   // alert(document.getElementById("email").value);
 }

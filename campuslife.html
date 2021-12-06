@@ -6,23 +6,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/campuslife.css" rel="stylesheet">
   <title>Campus Life, Buddy.io</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/campuslife.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-light">
     <img src="img/buddy.io.png" id="logo" />
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="academia.html">Academia<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="campuslife.html">Campus Life<span class="sr-only"></span></a>
       </li>
     </ul>
   </nav>
+
+  <div id="sideCards">
+    <div class="card" id="tabs">
+
+      <!-- <div class="card-header" style="background-color:#fafafa"> -->
+      <div class="card-header" style="background-color:#fafafa" id="bannerPhoto">
+      <!-- <div class="card-header" style="background-color:#fafafa"> -->
+        <!-- <div id = "bannerPhoto"> -->
+          <h2 id="pageTitle">BuddyExperience</h2>
+          <ul class="nav nav-tabs card-header-tabs" id="selectors">
+            <li class="nav-item">
+              <button class="nav-link active" id="buddyExperienceTab" onclick="tabOnclick()">BuddyExperience</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="fleaMarketTab" onclick="tabOnclick()">FleaMarket</button>
+            </li>
+          </ul>
+        <!-- </div> -->
+        <!-- <div class="card-header" id="postInteraction" style="display:flex; flow-direction:row;">
+          <form id="searchBox">
+            <div id="searchInput">
+              <input type="text" class="form-control" placeholder="What are looking for"/>
+            </div>
+            <div>
+              <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+          </form>
+          <button id="newPost">
+            <i class="fas fa-pen"></i>
+          </button>
+        </div> -->
+
+      </div>
+
+      <a class="card-body userPosts" href="post.html">
+        <h5 class="card-title">Homework 5 need help!</h5>
+        <p class="timePosted" style="font-size:x-small"> 30 seconds before </p>
+        <p class="card-text">So I never go to class but hw5 is due tmr. Please someone help!
+        </p>
+      </a>
+      <hr>
+      <a class="card-body userPosts" href="post.html">
+        <h5 class="card-title">Anybody looking for their phone?</h5>
+        <p class="timePosted" style="font-size:x-small"> 1 hour before </p>
+        <p class="card-text">I found an iPhone burning in the sink...
+        </p>
+      </a>
+      <hr>
+      <a class="card-body userPosts" href="post.html">
+        <h5 class="card-title">The third post</h5>
+        <p class="timePosted" style="font-size:x-small"> 2 hours before </p>
+        <p class="card-text">I am running out of words to say...
+        </p>
+      </a>
+
+      <!-- <div class="card-header" id="postInteraction" style="display:flex; flow-direction:row;">
+        <form id="searchBox">
+          <div id="searchInput">
+            <input type="text" class="form-control" placeholder="What are looking for"/>
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+        </form>
+        <button id="newPost">
+          <i class="fas fa-pen"></i>
+        </button>
+      </div> -->
+
+    </div>
+  </div>
 
 </body>
 
