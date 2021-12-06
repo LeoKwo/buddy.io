@@ -1,7 +1,6 @@
 #pageContent {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   width: 80%;
   margin: 5em;
   margin-top: 2em;
@@ -9,25 +8,45 @@
   margin-right: auto;
 }
 
-#courseInfo {
+#professorInfo {
   display: flex;
-  flex-direction: column;
+  /* display: block; */
+  /* align-items: center; */
+  flex-direction: row;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
   padding: 2em;
   border-radius: 10px;
-  background-image: url("../img/banner.jpeg");
+  background-image: url("../img/professorDefaultBanner.jpeg");
   color: white;
+  text-shadow:
+    1px 1px 50px #000,
+    /* 1px 1px 50px #000, */
+    /* 1px 1px 10px #000, */
+    1px 1px 10px #000;
 }
 
-#professorInfo {
-  width: 100%;
-  text-align: right;
+#starRating {
+  display: flex;
+  flex-direction: row;
 }
 
-#rateMyProfessorCard {
+#professorAvatar {
+  width: 10em;
+  margin-left: auto;
+  float: right;
+  border-radius: 15px;
+  /* width: 100%; */
+}
+
+#overallRatingCard {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#commentCard {
   margin-left: 5em;
 }
 
@@ -35,7 +54,7 @@
   margin-bottom: 2em;
 }
 
-#sideCards {
+#comments {
   margin-right: 0px;
   width: 100%;
 }
@@ -51,7 +70,6 @@
   padding-top: 10px;
   display: flex;
   flex-direction: row;
-  /* padding-bottom: 10px; */
   flex-grow: 1;
 }
 
@@ -67,7 +85,6 @@
   flex-direction: row;
   background-color: white;
   padding-bottom: 0;
-  /* margin: 0; */
   width: 100%;
 }
 
@@ -75,10 +92,10 @@
   color: #000000;
 }
 
-.userPosts:hover {
+/* .userPosts:hover {
   color: #F76900;
   text-decoration: none;
-}
+} */
 
 #searchBox {
   display: flex;

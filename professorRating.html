@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/navbar.css" rel="stylesheet">
-  <link href="css/coursePage.css" rel="stylesheet">
-  <title>Course Page</title>
+  <link href="css/professorRating.css" rel="stylesheet">
+  <title>RateMyProfessor</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/coursePage.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -28,9 +26,8 @@
   </nav>
 
   <div id="courseInfo">
-    <h1 id="courseName">Course Name</h1>
+    <h1 id="courseName">RateMyProfessor</h1>
     <h5 id="courseName">Autumn 2021</h5>
-    <p id="courseDescription">Course description is basically a course description of the course that you are taking. It describes the course and tell you about the course.</p>
   </div>
 
 
@@ -60,7 +57,7 @@
             <button class="btn btn-primary" type="submit">Search</button>
           </div>
         </form>
-        <button id="newPost" onclick="createNewPost()">
+        <button id="newPost">
           <i class="fas fa-pen"></i>
         </button>
       </div>
@@ -94,17 +91,17 @@
         <h2>Rate My Professor</h2>
         <ul class="nav nav-tabs card-header-tabs">
           <li class="nav-item">
-            <button class="nav-link active" prop="disabled:true">Your instructors</button>
+            <a class="nav-link active" href="#">Your instructors</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="professorRating.html">Other instructors  <i class="fas fa-link"></i></a>
+            <a class="nav-link" href="#">Other instructors  <i class="fas fa-link"></i></a>
           </li>
         </ul>
       </div>
       <div class="list">
         <ul class="list-group list-group-flush rateMyProfessorList">
           <li class="list-group-item" >
-            <a href="professorRatingDetail.html" style="color:#000E54">
+            <a href="..." style="color:#000E54">
               CIS 623: Andrew Lee
               <div style="float:right">
                 <i class="fas fa-star" style="color:#F76900"></i>
@@ -116,7 +113,7 @@
             </a>
           </li>
           <li class="list-group-item">
-            <a href="professorRatingDetail.html" style="color:#000E54">
+            <a href="..." style="color:#000E54">
               CIS 655: Ercanli
               <div style="float:right">
                 <i class="fas fa-star" style="color:#F76900"></i>
@@ -128,7 +125,7 @@
             </a>
           </li>
           <li class="list-group-item">
-            <a href="professorRatingDetail.html" style="color:#000E54">
+            <a href="professorRating" style="color:#000E54">
               CSE 687: Edmund Yu
               <div style="float:right">
                 <i class="fas fa-star" style="color:#F76900"></i>

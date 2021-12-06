@@ -1,7 +1,6 @@
 #pageContent {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   width: 80%;
   margin: 5em;
   margin-top: 2em;
@@ -18,9 +17,26 @@
   margin-top: 1em;
   padding: 2em;
   border-radius: 10px;
-  background-image: url("../img/banner.jpeg");
+  background-image: url("../img/professorBanner.jpeg");
   color: white;
+  text-shadow:
+    /* 1px 1px 50px #000, */
+    1px 1px 50px #000;
 }
+
+/* #courseInfo::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("../img/accountBG.jpeg");
+  text-align: right;
+  filter: blur(30px);
+} */
+
+/* #courseInfo-inside {
+  position: relative;
+} */
 
 #professorInfo {
   width: 100%;
@@ -29,6 +45,9 @@
 
 #rateMyProfessorCard {
   margin-left: 5em;
+  /* margin-right: 0; */
+  /* width: 100%; */
+  /* padding-right: 0; */
 }
 
 #coursePostPinned {
@@ -48,10 +67,7 @@
   border: none;
   background-color: #ffffff;
   color: #000E54;
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
-  /* padding-bottom: 10px; */
+  padding-bottom: 10px;
   flex-grow: 1;
 }
 
@@ -84,7 +100,7 @@
   display: flex;
   flex-direction: row;
   width:20em;
-  margin-right:20em;
+  margin-right:3em;
   height: 3em;
   flex-grow: 8;
 }

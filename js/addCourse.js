@@ -24,11 +24,11 @@ socket.onerror = function(error) {
 };
 
 function login() {
-  const email = $("#email").val();
-  const password = $("#password").val();
+  const courseKeyword = $("#courseKeywordInput").val();
+  // const password = $("#password").val();
   // socket.send(email);
-  socket.send(email);
+  socket.send(courseKeyword);
   // console.log(email);
-  // $("#testH1").html(email);
+  // $("#testH1").html(courseKeyword);
   // alert(document.getElementById("email").value);
 }
