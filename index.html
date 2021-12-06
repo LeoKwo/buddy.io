@@ -9,6 +9,8 @@
   <title>Buddy.io Login</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,17 +22,19 @@
         <p style="text-align:center;">Welcome! Please login or create a new account.</p>
 
         <div class="input-group mb-3 input-group-lg">
-          <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon1" id="email">
           <div class="input-group-append">
             <span class="input-group-text" id="basic-addon2">@syr.edu</span>
           </div>
         </div>
 
         <div class="input-group mb-3 input-group-lg">
-          <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+          <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" id="password">
 
         </div>
-        <a type="button" class="btn btn-primary accountButton" href="academia.html" id="loginButton">login</a>
+        <!-- <a type="button" class="btn btn-primary accountButton" href="academia.html" id="loginButton" onClick="login()">login</a> -->
+        <!-- <a type="button" class="btn btn-primary accountButton" href="" id="loginButton" onClick="login()">login</a> -->
+        <button type="button" class="btn btn-primary accountButton" id="loginButton" onClick="login()">login</button>
 
         <p style="text-align:center; padding-top: 2em; padding-bottom: 1em;">- OR -</p>
 
@@ -39,6 +43,8 @@
       </div>
     </div>
   </div>
+
+  <h1 id="testH1">abc</h1>
 
 </body>
 
