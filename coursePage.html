@@ -45,8 +45,31 @@
       </div>
       <div class="card-body">
         <h5 class="card-title">COVID-19 Update: Please Read!</h5>
-        <p class="card-text">You may have been in contact with a confimed COVID-19 positive patient.</p>
-        <button href="#" class="btn btn-primary" style="background-color:#000E54">View message</button>
+        <p class="card-text">You may have been in contact with a confirmed-positive COVID-19 patient.</p>
+        <!-- <button href="#" class="btn btn-primary" style="background-color:#000E54">View message</button> -->
+
+
+
+
+        <button class="btn btn-primary" style="background-color:#F76900; border:0;" id="myBtn" onclick="popupFunction()">View message</button>
+        <!-- The Modal -->
+        <div id="popup" class="modal">
+          <div class="modal-content">
+            <i class="fas fa-times close" onclick="popupCloseFunction()"></i>
+            <h3>
+              You may have had close contact with a confirmed-positive COVID-19 case
+            </h3>
+            <p>
+              Dear student,
+            </p>
+            <p>
+              You are being notified that one member of our university has been diagnosed with COVID-19. We conducted an investigation to determine students/faculty members who may have had close contact with the confirmed-positive member. As such, you have been identified as an individual who may have been exposed to this virus between Nov.27 - Dec.1. According to the Centers for Disease Control and Prevention (CDC), the virus is spread mainly between people who are in close contact with one another (less than 6 feet apart for 15 minutes or longer) through respiratory droplets produced when an infected person coughs or sneezes. Please visit this <a href="https://www.syracuse.edu/staysafe/about-coronavirus-staying-healthy/covid-19-response-checklists/">webpage</a> for our COVID-19 response checklist.
+            </p>
+          </div>
+        </div>
+
+
+
       </div>
     </div>
 
@@ -60,10 +83,30 @@
             <button class="btn btn-primary" type="submit">Search</button>
           </div>
         </form>
-        <button id="newPost" onclick="createNewPost()">
+        <button class="newPost" id="newPostIcon" onclick="createNewPost()">
           <i class="fas fa-pen"></i>
         </button>
+
+        <button class="newPost" id="closeIcon" onclick="closeNewPost()">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
+      
+      <!-- hidden new post component -->
+      <div class='card-header' id="newPostCard" style=''>
+        <form id='newPostForm'>
+          <div class='form-group'>
+            <label for='newPostTitle'>Topic</label>
+            <input type='email' class='form-control' id='newPostTitle' placeholder='Homework 5 discussion, Review material for midterm?, etc.'>
+          </div>
+          <div class='form-group'>
+            <label for='newPostTestArea'>What's on your mind?</label>
+            <textarea class='form-control' id='newPostTestArea'></textarea>
+          </div>
+          <button type='submit' class='btn btn-primary' style='background-color: #F76900; margin-left:auto;'>AskForHelp!</button>
+        </form>
+      </div>
+
       <a class="card-body userPosts" href="post.html">
         <h5 class="card-title">Homework 5 need help!</h5>
         <p class="timePosted" style="font-size:x-small"> 30 seconds before </p>

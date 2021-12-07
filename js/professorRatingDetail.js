@@ -25,9 +25,6 @@ function starClick(star_id) {
   alert("You gave this instructor " + star_id + " star(s) rating!");
   $("#ratingMessage").html("You have rated this instructor " + star_id + " stars.")
   $("#ratingPrompt").html("")
-
-  // const starRating = $("#");
-
   for (let i = 1; i <= star_id; i++) {
     $("#" + i).empty();
     $("#" + i).html('<i class="fas fa-star ratingStar" style="color:#F76900"></i>');
