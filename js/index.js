@@ -1,4 +1,5 @@
 let socket = new WebSocket("ws://127.0.0.1:8000/");
+let loggedin = false;
 
 socket.onopen = function(e) {
   // alert("[open] Connection established");
@@ -7,8 +8,23 @@ socket.onopen = function(e) {
 };
 
 socket.onmessage = function(event) {
-  alert(`[message] Data received from server: ${event.data}`);
+  // alert(`[message] Data received from server: ${event.data}`);
   // $("#testH1").html(event.data);
+  if (event.data == "connected") {
+    // alert(`[message] Data received from server: ${event.data}`);
+    // loggedin = true;
+    // socket.close();
+    // window.location.href = "academia.html";
+  }
+  if(event.data == "success") {
+    loggedin = true;
+    socket.close();
+    window.location.href = "academia.com";
+    // res.redirect('/UserHomePage');
+  }
+  if (event.data == "fail") {
+
+  }
 };
 
 socket.onclose = function(event) {
@@ -31,4 +47,11 @@ function login() {
   socket.send(email);
   socket.send(password);
   socket.send("end");
+
+  // // socket.close();
+  // while (loggedin == false) {
+  //   // wait
+  // }
+
+
 }
