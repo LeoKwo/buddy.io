@@ -47,6 +47,7 @@ function signup() {
     socket.send(password);
     socket.send(organization);
     socket.send(role);
+    socket.send("end")
   } else {
     // do a banner
     alert("Fill out the required fields!");
