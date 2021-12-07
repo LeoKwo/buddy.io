@@ -7,7 +7,7 @@ socket.onopen = function(e) {
 };
 
 socket.onmessage = function(event) {
-  // alert(`[message] Data received from server: ${event.data}`);
+  alert(`[message] Data received from server: ${event.data}`);
   // $("#testH1").html(event.data);
 };
 
@@ -26,8 +26,11 @@ socket.onerror = function(error) {
 function login() {
   const email = $("#email").val();
   const password = $("#password").val();
+  socket.send("login")
   // socket.send(email);
   socket.send(email);
+  socket.send(password);
+  socket.send("end");
   // console.log(email);
   // $("#testH1").html(email);
   // alert(document.getElementById("email").value);
