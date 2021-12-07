@@ -10,6 +10,8 @@
   <title>Account Creation</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/accountCreation.js"></script>
 </head>
 
 <body>
@@ -24,7 +26,8 @@
         <form>
           <div class="form-group">
             <label for="organizationSelect">Select your Organization</label>
-            <select class="form-control" id="organizationSelect">
+            <select class="form-control" id="organizationSelect" required>
+              <option selected disabled value="">Choose an organization</option>
               <option>Syracuse University</option>
               <option>University of Washington</option>
               <option>Carnegie Mellon University</option>
@@ -33,21 +36,22 @@
 
           <div class="form-group">
             <label for="emailInput">Your organization email address</label>
-            <input type="email" class="form-control" id="emailInput" placeholder="name@university.com">
+            <input type="email" class="form-control" id="emailInput" placeholder="name@university.com" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
           </div>
 
           <div class="form-group">
             <label for="usernameInput">Choose your username</label>
-            <input type="email" class="form-control" id="usernameInput" placeholder="JaneDoe123">
+            <input type="text" class="form-control" id="usernameInput" placeholder="JaneDoe123">
           </div>
 
           <div class="form-group">
-            <label for="yearSelect">(Optional) You are a ...</label>
-            <select class="form-control" id="yearSelect">
+            <label for="roleSelect">(Optional) You are a ...</label>
+            <select class="form-control" id="roleSelect" required>
+              <option selected disabled value="">Undisclosed</option>
               <option>Undergraduate</option>
               <option>Graduate</option>
               <option>Faculty Member</option>
-              <option>A Student's Associate</option>
+              <option>Student's Associate</option>
               <option>Administrator</option>
             </select>
           </div>
@@ -55,15 +59,15 @@
 
           <div class="form-group">
             <label for="passwordInput">Password</label>
-            <input type="password" class="form-control" id="passwordInput" placeholder="Please pick something other than 1234...">
+            <input type="password" class="form-control" id="passwordInput" placeholder="Please pick something other than 1234..." required>
           </div>
+          <button type="submit" class="btn btn-primary accountButton" id="loginButton" onClick="signup()">Let's go!</button>
         </form>
 
-        <a type="button" class="btn btn-primary accountButton" href="academia.html" id="loginButton">Let's go!</a>
+        <!-- <button type="button" class="btn btn-primary accountButton" id="loginButton" onClick="signup()">Let's go!</button> -->
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
