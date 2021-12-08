@@ -11,6 +11,7 @@ socket.onmessage = function(event) {
   // alert(event.data);
   var newRating = event.data;
   $("#professorRating").html("Overall" + newRating + "stars");
+  window.location.href = "professorRatingDetail.html";
   // if (event.data != "rate" && event.data != "end") {
   //   professorInfoArray.push(event.data);
   // }
