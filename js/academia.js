@@ -8,6 +8,31 @@ for (i = 0; i < courseCardImages.length; i++) {
   courseCardImages[i].style.backgroundColor = colors[randInt].toString();
 }
 
+let socket = new WebSocket("ws://127.0.0.1:8000/");
+
+socket.onopen = function(e) {
+  // do nothing
+};
+
+socket.onmessage = function(event) {
+  // do nothing
+};
+
+socket.onclose = function(event) {
+  if (event.wasClean) {
+    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+  } else {
+    alert('[close] Connection died');
+  }
+};
+
+socket.onerror = function(error) {
+  alert(`[error] ${error.message}`);
+};
+
+
 function coursePageButtonClick(course_id) {
-  alert(course_id);
+  socket.send("coursePageId");
+  socket.send(course_id);
+  // alert("end");
 }

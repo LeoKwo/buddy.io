@@ -47,16 +47,9 @@ function login() {
   const password = $("#password").val();
   socket.send("login")
 
-  socket.send(email);
+  socket.send(email + "@syr.edu");
   socket.send(password);
   socket.send("end");
-
-  // // socket.close();
-  // while (loggedin == false) {
-  //   // wait
-  // }
-
-
 }
 
 function popupCloseFunction() {
