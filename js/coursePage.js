@@ -25,7 +25,7 @@ var courseInfoArray = new Array();
 
 socket.onopen = function(e) {
   // socket.send('requestCoursePage');
-  // socket.send('end');
+  socket.send('end');
 };
 
 socket.onmessage = function(event) {
@@ -103,9 +103,9 @@ function newPostSubmit() {
   socket.send($("#newPostTitle").val());
   socket.send($("#newPostTestArea").val());
 
-  socket.send(d.getFullYear());
-  socket.send(d.getMonth());
-  socket.send(d.getDate());
+  socket.send(d.getFullYear().toString());
+  socket.send(d.getMonth().toString());
+  socket.send(d.getDate().toString());
   // alert($("#newPostTitle").val());
   // alert($("#newPostTestArea").val());
   // alert(d.getFullYear());

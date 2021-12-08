@@ -2,7 +2,7 @@ let socket = new WebSocket("ws://127.0.0.1:8000/");
 // var professorId = 1;
 
 socket.onopen = function(e) {
-  socket.send('requestProfessorPage');
+  // socket.send('requestProfessorPage');
   socket.send('end');
 };
 
