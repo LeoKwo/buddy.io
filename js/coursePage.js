@@ -57,7 +57,8 @@ socket.onerror = function(error) {
 function loadCoursePage(courseInfo) {
   var coursePosts = new Array();
   var courseName = courseInfo[0];
-  for (let i = 2; i < courseInfo.length; i++) {
+  var courseId = courseInfo[1];
+  for (let i = 3; i < courseInfo.length; i++) {
     coursePosts.push(courseInfo[i]);
   }
 
