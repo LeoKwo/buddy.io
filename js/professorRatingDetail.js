@@ -6,15 +6,17 @@ socket.onopen = function(e) {
   socket.send('end');
 };
 
-var professorInfoArray = new Array();
+// var professorInfoArray = new Array();
 socket.onmessage = function(event) {
-  alert(event.data);
-  if (event.data != "rate" && event.data != "end") {
-    professorInfoArray.push(event.data);
-  }
-  if (event.data == "end") {
-    loadProfessorPage(loadProfessorPage);
-  }
+  // alert(event.data);
+  var newRating = event.data;
+  $("#professorRating").html("Overall" + newRating + "stars");
+  // if (event.data != "rate" && event.data != "end") {
+  //   professorInfoArray.push(event.data);
+  // }
+  // if (event.data == "end") {
+  //   loadProfessorPage(loadProfessorPage);
+  // }
 };
 
 socket.onclose = function(event) {
