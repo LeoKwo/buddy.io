@@ -95,9 +95,9 @@ function professorLink(professor_id) {
 
 function newPostSubmit() {
   // socket = new WebSocket("ws://127.0.0.1:8000/");
-  courseInfoArray = new Array();
-  $("#newPostCard").after();
-  const d = new Date();
+  // courseInfoArray = new Array();
+  // $("#newPostCard").after();
+  // const d = new Date();
   socket.send("newPost");
   socket.send(courseId);
   socket.send($("#newPostTitle").val());
@@ -112,7 +112,7 @@ function newPostSubmit() {
   // alert(d.getMonth());
   // alert(d.getDate());
   alert("Submitted!");
-
+  window.location.href = "coursePage.html";
   // socket.send('requestCoursePage');
   // socket.send('end');
 }
