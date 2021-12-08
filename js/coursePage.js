@@ -30,7 +30,7 @@ socket.onopen = function(e) {
 
 socket.onmessage = function(event) {
   // var courseInfo = new List();
-  if (event.data != "coursePageInfo" && event.data != "end") {
+  if (event.data != "course" && event.data != "end") {
     // courseInfoArray.add(event.data);
     courseInfoArray.push(event.data);
   }
@@ -57,17 +57,19 @@ socket.onerror = function(error) {
 
 
 function loadCoursePage(courseInfo) {
-  var courseName = "";
-  var courseDesc = "";
+  // var courseName = "";
+  var courseName = courseInfo[0];
+  // var courseDesc = "";
   var coursePosts = new Array();
-  for (let i = 0; i < courseInfo.length; i++) {
-    if (i == 0) {
-      courseName = courseInfo[i];
-    } else if (i == 1) {
-      courseDesc = courseInfo[i];
-    } else {
-      coursePosts.push(courseInfo[i]);
-    }
+  for (let i = 3; i < courseInfo.length; i++) {
+    // if (i == 0) {
+      // courseName = courseInfo[0];
+    // } else if (i == 1) {
+    //   courseDesc = courseInfo[i];
+    // } else {
+    // } else {
+    coursePosts.push(courseInfo[i]);
+    // }
   }
 
   $("#courseName").html(courseName);
@@ -79,7 +81,7 @@ function addCoursePosts(postInfo) {
   var courseName = "";
   var courseDesc = "";
   var coursePosts = new Array();
-  for (let i = 1; i < courseInfo.length - 1; i+=3) {
+  for (let i = 0; i < courseInfo.length; i+=3) {
     // if (i == 0) {
     //   courseName = courseInfo[i];
     // } else if (i == 1) {
@@ -88,6 +90,7 @@ function addCoursePosts(postInfo) {
     //   coursePosts.push(courseInfo[i]);
     // }
     $("#newPostCard").after(
+      "<hr>" +
       "<a class='card-body userPosts' href='post.html'>" +
         "<h5 class='card-title'>" + couseInfo[i] + "</h5>" +
         "<p class='timePosted' style='font-size:x-small'>" + courseInfo[i + 1] + "</p>" +
