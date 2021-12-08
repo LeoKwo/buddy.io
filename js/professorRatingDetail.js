@@ -9,7 +9,7 @@ socket.onopen = function(e) {
 var professorInfoArray = new Array();
 socket.onmessage = function(event) {
   alert(event.data);
-  if (event.data != "professor" && event.data != "end") {
+  if (event.data != "rate" && event.data != "end") {
     professorInfoArray.push(event.data);
   }
   if (event.data == "end") {
@@ -30,9 +30,9 @@ socket.onerror = function(error) {
 };
 
 loadProfessorPage(professorInfo) {
-  $("#professorName").html(professorInfo[0]);
-  $("#professorRating").html("Overall: " + professorInfo[1] + "stars");
-  $("#professorAvatar").css("src", "img/professor" + professorInfo[2] + ".jpeg")
+  $("#professorName").html(professorInfo[1]);
+  $("#professorRating").html("Overall: " + professorInfo[2] + "stars");
+  $("#professorAvatar").css("src", "img/professor" + professorInfo[0] + ".jpeg")
   // for (let i = 0; i < professorInfo.length; i++) {
   //   $("$professorName").html(professorInfo[i])
   // }
@@ -66,6 +66,10 @@ function tabOnclick() {
 
 function starClick(star_id) {
   alert("You gave this instructor " + star_id + " star(s) rating!");
+  socket.send("rating");
+  socket.send($("#professorName").text());
+  socket.send(star_id);
+  socket.send("end");
   $("#ratingMessage").html("You have rated this instructor " + star_id + " stars.")
   $("#ratingPrompt").html("")
   for (let i = 1; i <= star_id; i++) {
