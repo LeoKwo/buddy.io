@@ -89,3 +89,23 @@ function professorLink(professor_id) {
   // socket.end();
   window.location.href = "professorRatingDetail.html";
 }
+
+function newPostSubmit() {
+  const d = new Date();
+  socket.send("newPost");
+  socket.send(courseId);
+  socket.send($("#newPostTitle").val());
+  socket.send($("#newPostTestArea").val());
+
+  socket.send(d.getFullYear());
+  socket.send(d.getMonth());
+  socket.send(d.getDate());
+  // alert($("#newPostTitle").val());
+  // alert($("#newPostTestArea").val());
+  // alert(d.getFullYear());
+  // alert(d.getMonth());
+  // alert(d.getDate());
+  alert("Submitted!");
+  socket.send('requestCoursePage');
+  socket.send('end');
+}

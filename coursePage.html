@@ -94,13 +94,13 @@
         <form id='newPostForm'>
           <div class='form-group'>
             <label for='newPostTitle'>Topic</label>
-            <input type='email' class='form-control' id='newPostTitle' placeholder='Homework 5 discussion, Review material for midterm?, etc.'>
+            <input type='text' class='form-control' id='newPostTitle' placeholder='Homework 5 discussion, Review material for midterm?, etc.' required>
           </div>
           <div class='form-group'>
             <label for='newPostTestArea'>What's on your mind?</label>
-            <textarea class='form-control' id='newPostTestArea'></textarea>
+            <textarea class='form-control' id='newPostTestArea' required></textarea>
           </div>
-          <button type='submit' class='btn btn-primary' style='background-color: #F76900; margin-left:auto;'>AskForHelp!</button>
+          <button type='submit' class='btn btn-primary' style='background-color: #F76900; margin-left:auto;' onclick='newPostSubmit()'>AskForHelp!</button>
         </form>
       </div>
       <!-- <hr>
