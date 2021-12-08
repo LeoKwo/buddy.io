@@ -29,7 +29,7 @@ socket.onopen = function(e) {
 };
 
 socket.onmessage = function(event) {
-  alert.(event.data);
+  alert(event.data);
   // var courseInfo = new List();
   if (event.data != "course" && event.data != "end" && event.data != "post") {
     // courseInfoArray.add(event.data);
@@ -57,12 +57,12 @@ socket.onerror = function(error) {
 };
 
 // var coursePosts = new Array();
-
 function loadCoursePage(courseInfo) {
   // var courseName = "";
+  var coursePosts = new Array();
   var courseName = courseInfo[0];
   // var courseDesc = "";
-  var coursePosts = new Array();
+  // var coursePosts = new Array();
   for (let i = 2; i < courseInfo.length; i++) {
     // if (i == 0) {
       // courseName = courseInfo[0];
