@@ -29,6 +29,7 @@ socket.onopen = function(e) {
 };
 
 socket.onmessage = function(event) {
+  alert.(event.data);
   // var courseInfo = new List();
   if (event.data != "course" && event.data != "end" && event.data != "post") {
     // courseInfoArray.add(event.data);
@@ -111,8 +112,8 @@ function addCoursePosts(postInfo) {
       "<hr>" +
       "<a class='card-body userPosts' href='post.html'>" +
         "<h5 class='card-title'>" + postInfo[i] + "</h5>" +
-        "<p class='timePosted' style='font-size:x-small'>" + postInfo[i + 1] + "</p>" +
-        "<p class='card-text'>"+ postInfo[i + 2] +
+        "<p class='timePosted' style='font-size:x-small'>" + postInfo[i + 2] + "</p>" +
+        "<p class='card-text'>"+ postInfo[i + 1] +
         "</p>" +
       "</a>"
     );
