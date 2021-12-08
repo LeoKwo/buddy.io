@@ -30,7 +30,7 @@ socket.onopen = function(e) {
 
 socket.onmessage = function(event) {
   // var courseInfo = new List();
-  if (event.data != "course" && event.data != "end") {
+  if (event.data != "course" && event.data != "end" && event.data != "post") {
     // courseInfoArray.add(event.data);
     courseInfoArray.push(event.data);
   }
@@ -55,13 +55,14 @@ socket.onerror = function(error) {
   alert(`[error] ${error.message}`);
 };
 
+// var coursePosts = new Array();
 
 function loadCoursePage(courseInfo) {
   // var courseName = "";
   var courseName = courseInfo[0];
   // var courseDesc = "";
   var coursePosts = new Array();
-  for (let i = 3; i < courseInfo.length; i++) {
+  for (let i = 2; i < courseInfo.length; i++) {
     // if (i == 0) {
       // courseName = courseInfo[0];
     // } else if (i == 1) {
@@ -73,22 +74,39 @@ function loadCoursePage(courseInfo) {
   }
 
   $("#courseName").html(courseName);
-  $("#courseDescription").html(courseDesc);
+  // $("#courseDescription").html(courseDesc);
   addCoursePosts(coursePosts);
 }
 
 function addCoursePosts(postInfo) {
-  // var courseName = "";
-  // var courseDesc = "";
+// function addCoursePosts() {
   // var coursePosts = new Array();
+  // coursePosts.push("Title");
+  // coursePosts.push("FullText");
+  // coursePosts.push("Time");
+
+  // $("#newPostCard").after(
+  //   "<hr>" +
+  //   "<a class='card-body userPosts' href='post.html'>" +
+  //     "<h5 class='card-title'>" + "postInfo[i]" + "</h5>" +
+  //     "<p class='timePosted' style='font-size:x-small'>" + "postInfo[i + 1]" + "</p>" +
+  //     "<p class='card-text'>"+ "postInfo[i + 2]" +
+  //     "</p>" +
+  //   "</a>"
+  // );
+  // for (let i = 0; i < coursePosts.length; i+=3) {
+  //   $("#newPostCard").after(
+  //     "<hr>" +
+  //     "<a class='card-body userPosts' href='post.html'>" +
+  //       "<h5 class='card-title'>" + coursePosts[i] + "</h5>" +
+  //       "<p class='timePosted' style='font-size:x-small'>" + coursePosts[i + 1] + "</p>" +
+  //       "<p class='card-text'>"+ coursePosts[i + 2] +
+  //       "</p>" +
+  //     "</a>"
+  //   );
+  // }
+
   for (let i = 0; i < postInfo.length; i+=3) {
-    // if (i == 0) {
-    //   courseName = courseInfo[i];
-    // } else if (i == 1) {
-    //   courseDesc = courseInfo[i];
-    // } else {
-    //   coursePosts.push(courseInfo[i]);
-    // }
     $("#newPostCard").after(
       "<hr>" +
       "<a class='card-body userPosts' href='post.html'>" +
