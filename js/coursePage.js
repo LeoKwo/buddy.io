@@ -85,7 +85,7 @@ function professorLink(professor_id) {
   } else {
     socket.send("Edmund Yu");
   }
-  socket.send('end');
+  // socket.send('end');
   // socket.end();
   window.location.href = "professorRatingDetail.html";
 }

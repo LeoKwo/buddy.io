@@ -32,7 +32,7 @@ socket.onerror = function(error) {
 loadProfessorPage(professorInfo) {
   $("#professorName").html(professorInfo[0]);
   $("#professorRating").html("Overall: " + professorInfo[1] + "stars");
-  $("#professorAvatar").css("src", "img/" + professorInfo[2] + ".jpeg")
+  $("#professorAvatar").css("src", "img/professor" + professorInfo[2] + ".jpeg")
   // for (let i = 0; i < professorInfo.length; i++) {
   //   $("$professorName").html(professorInfo[i])
   // }
