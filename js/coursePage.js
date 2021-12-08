@@ -91,6 +91,7 @@ function professorLink(professor_id) {
 }
 
 function newPostSubmit() {
+  socket = new WebSocket("ws://127.0.0.1:8000/");
   const d = new Date();
   socket.send("newPost");
   socket.send(courseId);
@@ -106,7 +107,7 @@ function newPostSubmit() {
   // alert(d.getMonth());
   // alert(d.getDate());
   alert("Submitted!");
-  
+
   // socket.send('requestCoursePage');
   // socket.send('end');
 }
