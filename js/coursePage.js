@@ -30,11 +30,14 @@ socket.onopen = function(e) {
 
 socket.onmessage = function(event) {
   alert(event.data);
+  // if () {
+  //
+  // }
   if (event.data != "course" && event.data != "end" && event.data != "post") {
     courseInfoArray.push(event.data);
   }
   if (event.data == "end") {
-    socket.close();
+    // socket.close();
     loadCoursePage(courseInfoArray);
   }
 };
@@ -91,7 +94,9 @@ function professorLink(professor_id) {
 }
 
 function newPostSubmit() {
-  socket = new WebSocket("ws://127.0.0.1:8000/");
+  // socket = new WebSocket("ws://127.0.0.1:8000/");
+  courseInfoArray = new Array();
+  $("#newPostCard").after();
   const d = new Date();
   socket.send("newPost");
   socket.send(courseId);
