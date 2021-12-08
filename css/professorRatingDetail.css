@@ -34,7 +34,8 @@
 }
 
 #professorAvatar {
-  width: 10em;
+  /* width: 10em; */
+  height: 12em;
   margin-left: auto;
   float: right;
   border-radius: 15px;

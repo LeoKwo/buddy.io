@@ -1,3 +1,46 @@
+let socket = new WebSocket("ws://127.0.0.1:8000/");
+// var professorId = 1;
+
+socket.onopen = function(e) {
+  socket.send('requestProfessorPage');
+  socket.send('end');
+};
+
+var professorInfoArray = new Array();
+socket.onmessage = function(event) {
+  alert(event.data);
+  if (event.data != "professor" && event.data != "end") {
+    professorInfoArray.push(event.data);
+  }
+  if (event.data == "end") {
+    loadProfessorPage(loadProfessorPage);
+  }
+};
+
+socket.onclose = function(event) {
+  if (event.wasClean) {
+    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+  } else {
+    alert('[close] Connection died');
+  }
+};
+
+socket.onerror = function(error) {
+  alert(`[error] ${error.message}`);
+};
+
+loadProfessorPage(professorInfo) {
+  $("#professorName").html(professorInfo[0]);
+  $("#professorRating").html("Overall: " + professorInfo[1] + "stars");
+  $("#professorAvatar").css("src", "img/" + professorInfo[2] + ".jpeg")
+  // for (let i = 0; i < professorInfo.length; i++) {
+  //   $("$professorName").html(professorInfo[i])
+  // }
+}
+
+
+
+
 function tabOnclick() {
   const negativeTab = $("#negativeTab");
   const positiveTab = $("#positiveTab");
