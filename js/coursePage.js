@@ -78,10 +78,10 @@ function loadCoursePage(courseInfo) {
 }
 
 function addCoursePosts(postInfo) {
-  var courseName = "";
-  var courseDesc = "";
-  var coursePosts = new Array();
-  for (let i = 0; i < courseInfo.length; i+=3) {
+  // var courseName = "";
+  // var courseDesc = "";
+  // var coursePosts = new Array();
+  for (let i = 0; i < postInfo.length; i+=3) {
     // if (i == 0) {
     //   courseName = courseInfo[i];
     // } else if (i == 1) {
@@ -92,9 +92,9 @@ function addCoursePosts(postInfo) {
     $("#newPostCard").after(
       "<hr>" +
       "<a class='card-body userPosts' href='post.html'>" +
-        "<h5 class='card-title'>" + couseInfo[i] + "</h5>" +
-        "<p class='timePosted' style='font-size:x-small'>" + courseInfo[i + 1] + "</p>" +
-        "<p class='card-text'>"+ courseInfo[i + 2] +
+        "<h5 class='card-title'>" + postInfo[i] + "</h5>" +
+        "<p class='timePosted' style='font-size:x-small'>" + postInfo[i + 1] + "</p>" +
+        "<p class='card-text'>"+ postInfo[i + 2] +
         "</p>" +
       "</a>"
     );
