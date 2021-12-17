@@ -9,7 +9,7 @@ socket.onopen = function(e) {
 };
 
 socket.onmessage = function(event) {
-  if (event.data != "campuslife" && event.data != "end") {
+  if (event.data != "campuslife" && event.data != "buddyexperience" && event.data != "fleamarket" && event.data != "end") {
     campusLifeInfoArray.push(event.data);
   }
   if (event.data == "end") {
