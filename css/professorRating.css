@@ -1,7 +1,7 @@
 #pageContent {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 50%;
   margin: 5em;
   margin-top: 2em;
   margin-left: auto;
@@ -11,7 +11,7 @@
 #courseInfo {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
@@ -20,83 +20,15 @@
   background-image: url("../img/professorBanner.jpeg");
   color: white;
   text-shadow:
-    /* 1px 1px 50px #000, */
     1px 1px 50px #000;
 }
 
-/* #courseInfo::before{
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: url("../img/accountBG.jpeg");
-  text-align: right;
-  filter: blur(30px);
-} */
-
-/* #courseInfo-inside {
-  position: relative;
-} */
-
-#professorInfo {
-  width: 100%;
-  text-align: right;
-}
-
-#rateMyProfessorCard {
-  margin-left: 5em;
-  /* margin-right: 0; */
-  /* width: 100%; */
-  /* padding-right: 0; */
-}
-
-#coursePostPinned {
-  margin-bottom: 2em;
-}
-
-#sideCards {
-  margin-right: 0px;
-  width: 100%;
-}
-
-#posts {
-  width: 200%;
-}
-
-#newPost {
-  border: none;
-  background-color: #ffffff;
-  color: #000E54;
-  padding-bottom: 10px;
-  flex-grow: 1;
-}
-
-#searchPost {
-  border: none;
-  background-color: #ffffff;
-  color: #000E54;
-  float: right;
-}
-
-#postInteraction{
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  padding-bottom: 0;
-  /* margin: 0; */
-  width: 100%;
-}
-
-.userPosts {
-  color: #000000;
-}
-
-.userPosts:hover {
-  color: #F76900;
-  text-decoration: none;
+#searchButton {
+  background-color: #000E54
 }
 
 #searchBox {
+  padding: 0;
   display: flex;
   flex-direction: row;
   width:20em;
@@ -105,7 +37,20 @@
   flex-grow: 8;
 }
 
-#searchInput {
-  padding-right: 1em;
-  color: #000E54;
+#searchOutside{
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  margin-top: 3em;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#professorInfo {
+  width: 100%;
+  text-align: right;
 }

@@ -32,3 +32,50 @@
   margin-top: auto;
   /* align-self: flex-end; */
 }
+
+#postInteraction{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding-bottom: 0;
+  /* margin: 0; */
+  width: 100%;
+}
+
+#searchBox {
+  display: flex;
+  flex-direction: row;
+  width:20em;
+  margin-right:20em;
+  height: 3em;
+  flex-grow: 20;
+}
+
+#closeIcon {
+  display: none;
+}
+
+.newPost {
+  border: none;
+  background-color: #ffffff;
+  color: #000E54;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+#newPostForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#newPostCard {
+  display: none;
+}
+
+#searchInput {
+  padding-right: 1em;
+  color: #000E54;
+}

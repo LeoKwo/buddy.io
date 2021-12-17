@@ -29,7 +29,7 @@ socket.onopen = function(e) {
 };
 
 socket.onmessage = function(event) {
-  alert(event.data);
+  // alert(event.data);
   // if () {
   //
   // }

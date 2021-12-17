@@ -6,10 +6,10 @@ socket.onopen = function(e) {
 };
 
 socket.onmessage = function(event) {
-  if (event.data == "connected") {
-    alert(`[message] Data received from server: ${event.data}`);
-    // do nothing
-  }
+  // if (event.data == "connected") {
+  //   alert(`[message] Data received from server: ${event.data}`);
+  //   // do nothing
+  // }
   if(event.data == "success") {
     loggedin = true;
     socket.close();

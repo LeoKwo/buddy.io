@@ -18,3 +18,16 @@ function tabOnclick() {
 
   // TODO: Post switch when clicking button
 }
+
+function createNewPost() {
+  $("#newPostCard").css("display", "flex");
+  $("#newPostCard").css("flow-direction", "row");
+  $("#closeIcon").css("display", "flex");
+  $("#newPostIcon").css("display", "none");
+}
+
+function closeNewPost() {
+  $("#newPostCard").css("display", "none");
+  $("#closeIcon").css("display", "none");
+  $("#newPostIcon").css("display", "flex");
+}

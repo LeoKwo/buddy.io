@@ -9,15 +9,10 @@ socket.onopen = function(e) {
 // var professorInfoArray = new Array();
 socket.onmessage = function(event) {
   // alert(event.data);
-  var newRating = event.data;
-  $("#professorRating").html("Overall" + newRating + "stars");
-  window.location.href = "professorRatingDetail.html";
-  // if (event.data != "rate" && event.data != "end") {
-  //   professorInfoArray.push(event.data);
-  // }
-  // if (event.data == "end") {
-  //   loadProfessorPage(loadProfessorPage);
-  // }
+  // var newRating = event.data;
+  // $("#professorRating").html("Overall" + newRating + "stars");
+  // window.location.href = "professorRatingDetail.html";
+
 };
 
 socket.onclose = function(event) {
@@ -32,10 +27,10 @@ socket.onerror = function(error) {
   alert(`[error] ${error.message}`);
 };
 
-loadProfessorPage(professorInfo) {
+function loadProfessorPage(professorInfo) {
   $("#professorName").html(professorInfo[1]);
   $("#professorRating").html("Overall: " + professorInfo[2] + "stars");
-  $("#professorAvatar").css("src", "img/professor" + professorInfo[0] + ".jpeg")
+  $("#professorAvatar").css("src", "img/professor" + professorInfo[0] + ".jpeg");
   // for (let i = 0; i < professorInfo.length; i++) {
   //   $("$professorName").html(professorInfo[i])
   // }
