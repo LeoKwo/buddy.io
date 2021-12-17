@@ -10,6 +10,7 @@ socket.onopen = function(e) {
 
 socket.onmessage = function(event) {
   alert(event.data);
+  campusLifeInfoArray = new Array();
   if (event.data != "campuslife" && event.data != "end") {
     campusLifeInfoArray.push(event.data);
   }
