@@ -4,7 +4,7 @@ var isBuddyExp = true;
 var campusLifeInfoArray = new Array();
 
 socket.onopen = function(e) {
-  socket.send('end');
+  // socket.send('end');
   loadCampusLife();
 };
 
@@ -32,8 +32,10 @@ socket.onerror = function(error) {
 function loadCampusLife() {
   if (isBuddyExp) {
     socket.send("buddyexperience");
+    socket.send("end");
   } else {
     socket.send("fleamarket");
+    socket.send("end");
   }
 }
 

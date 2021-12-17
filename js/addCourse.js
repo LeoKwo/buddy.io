@@ -1,14 +1,19 @@
 let socket = new WebSocket("ws://127.0.0.1:8000/");
 
+var courseSearchResultArray = new Array();
+
 socket.onopen = function(e) {
-  // alert("[open] Connection established");
-  // alert("Sending to server");
-  // socket.send("My name is John");
+  // do nothing
+  socket.send("end");
 };
 
 socket.onmessage = function(event) {
-  // alert(`[message] Data received from server: ${event.data}`);
-  // $("#testH1").html(event.data);
+  if (event.data != "courseSearchResult" && event.data != "end") {
+    courseSearchResultArray.push(event.data);
+  }
+  if (event.data == "end") {
+    renderCourseSearchResult(courseSearchResultArray);
+  }
 };
 
 socket.onclose = function(event) {
@@ -23,12 +28,32 @@ socket.onerror = function(error) {
   alert(`[error] ${error.message}`);
 };
 
-function login() {
+function searchCourse() {
   const courseKeyword = $("#courseKeywordInput").val();
-  // const password = $("#password").val();
-  // socket.send(email);
   socket.send(courseKeyword);
+  socket.send("end");
   // console.log(email);
   // $("#testH1").html(courseKeyword);
   // alert(document.getElementById("email").value);
+}
+
+function renderCourseSearchResult() {
+  $("#search").nextAll().remove();
+  for (let i = 0; i < courseSearchResultArray.length; i+=2) {
+    $("#search").after(
+      '<div class="col-sm-6 courseCard">' +
+        '<div class="card courseCardInside">' +
+          '<div class="card-body">' +
+            '<h5 class="card-title">' + courseSearchResultArray[i] + '</h5>' +
+            '<p class="card-text">' + courseSearchResultArray[i + 1] + '</p>' +
+            '<button class="btn btn-primary addCourseBtn" onclick="addCourse()">Add</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+}
+
+function addCourse() {
+  
 }
