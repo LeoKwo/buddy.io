@@ -72,14 +72,14 @@ function tabOnclick() {
     fleaMarketTab.removeClass("active");
     buddyExperienceTab.addClass("active");
     pageTitle.html("BuddyExperience");
-    bannerPhoto.css("background-image", "url('../img/experienceBannerPhoto.jpeg')");
+    bannerPhoto.css("background-image", "url('img/experienceBannerPhoto.jpeg')");
     isBuddyExp = true;
     loadCampusLife();
   } else {
     fleaMarketTab.addClass("active");
     buddyExperienceTab.removeClass("active");
     pageTitle.html("FleaMarket");
-    bannerPhoto.css("background-image", "url('../img/marketBannerPhoto.jpeg')");
+    bannerPhoto.css("background-image", "url('img/marketBannerPhoto.jpeg')");
     isBuddyExp = false;
     loadCampusLife();
   }
