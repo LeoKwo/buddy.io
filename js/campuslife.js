@@ -1,10 +1,10 @@
+// create a websocket object connecting to localhost:8000
 let socket = new WebSocket("ws://127.0.0.1:8000/");
 
 var isBuddyExp = true;
 var campusLifeInfoArray = new Array();
 
 socket.onopen = function(e) {
-  // socket.send('end');
   loadCampusLife();
 };
 
@@ -29,6 +29,7 @@ socket.onerror = function(error) {
   alert(`[error] ${error.message}`);
 };
 
+// load in either buddyExperience posts or fleaMarket posts based on current tab selection
 function loadCampusLife() {
   if (isBuddyExp) {
     socket.send("buddyexperience");
@@ -39,6 +40,7 @@ function loadCampusLife() {
   }
 }
 
+// sequentially add either buddyExperience posts or fleaMarket posts from the database based on current tab selection
 function addPosts(posts) {
   $("#newPostCard").nextAll().remove();
   for (let i = 0; i < posts.length; i+=3) {
@@ -113,7 +115,7 @@ function newPostSubmit() {
   socket.send($("#newPostTitle").val());
   socket.send($("#newPostTestArea").val());
   socket.send(d.getFullYear().toString());
-  socket.send(d.getMonth().toString());
+  socket.send((d.getMonth() + 1).toString());
   socket.send(d.getDate().toString());
   alert("Submitted!");
   window.location.href = "coursePage.html";

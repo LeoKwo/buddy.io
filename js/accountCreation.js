@@ -1,15 +1,12 @@
+// create a socket object connecting to localhost:8000
 let socket = new WebSocket("ws://127.0.0.1:8000/");
-let loggedin = false;
+let loggedin = false; // set initial loggedin boolean to false
 
 socket.onopen = function(e) {
   // do nothing
 };
 
 socket.onmessage = function(event) {
-  // if (event.data == "connected") {
-  //   alert(`[message] Data received from server: ${event.data}`);
-  //   // do nothing
-  // }
   if(event.data == "success") {
     loggedin = true;
     socket.close();
@@ -33,6 +30,7 @@ socket.onerror = function(error) {
   alert(`[error] ${error.message}`);
 };
 
+// signing up an account for the user based on the information he/she provides to us
 function signup() {
   const email = $("#emailInput").val();
   const password = $("#passwordInput").val();

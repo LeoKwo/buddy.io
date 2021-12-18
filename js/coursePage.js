@@ -107,7 +107,7 @@ function newPostSubmit() {
   socket.send($("#newPostTestArea").val());
 
   socket.send(d.getFullYear().toString());
-  socket.send(d.getMonth().toString());
+  socket.send((d.getMonth() + 1).toString());
   socket.send(d.getDate().toString());
   alert("Submitted!");
   window.location.href = "coursePage.html";

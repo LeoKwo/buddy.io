@@ -1,9 +1,9 @@
+// create a websocket object connecting to localhost:8000
 let socket = new WebSocket("ws://127.0.0.1:8000/");
 
 var courseSearchResultArray = new Array();
 
 socket.onopen = function(e) {
-  // do nothing
   socket.send("end");
 };
 
@@ -28,15 +28,14 @@ socket.onerror = function(error) {
   alert(`[error] ${error.message}`);
 };
 
+// send search keyword to backend
 function searchCourse() {
   const courseKeyword = $("#courseKeywordInput").val();
   socket.send(courseKeyword);
   socket.send("end");
-  // console.log(email);
-  // $("#testH1").html(courseKeyword);
-  // alert(document.getElementById("email").value);
 }
 
+// load in search returned results from the server
 function renderCourseSearchResult() {
   $("#search").nextAll().remove();
   for (let i = 0; i < courseSearchResultArray.length; i+=2) {
@@ -52,8 +51,4 @@ function renderCourseSearchResult() {
       '</div>'
     );
   }
-}
-
-function addCourse() {
-  
 }

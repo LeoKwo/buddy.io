@@ -1,10 +1,9 @@
+// create a new websocket object connecting to localhost:8000
 let socket = new WebSocket("ws://127.0.0.1:8000/");
-let loggedin = false;
+let loggedin = false; // set initial status "loggedin" as false
 
 socket.onopen = function(e) {
-  // alert("[open] Connection established");
-  // alert("Sending to server");
-  // socket.send("My name is John");
+  // do nothing
 };
 
 socket.onmessage = function(event) {
@@ -42,6 +41,7 @@ socket.onerror = function(error) {
   alert(`[error] ${error.message}`);
 };
 
+// send login information to the backend and wait for its response
 function login() {
   const email = $("#email").val();
   const password = $("#password").val();
@@ -52,6 +52,7 @@ function login() {
   socket.send("end");
 }
 
+// close popup modal
 function popupCloseFunction() {
   $("#popup").css("display", "none");
 }
