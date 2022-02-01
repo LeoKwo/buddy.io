@@ -63,3 +63,13 @@ The scope of Buddy.io is not set in stone yet. We may add or remove features in 
 
 ## Feasibility
 For all functions mentioned above, we believe they are feasible. Java provides all kinds of packages to support recommendation algorithms, database connectivity. For practicality, Buddy.io focuses on serving college students and meeting their needs. Functions like NightWalkRequest and RateMyProfessor may likely be of interest to most students.
+
+## Screenshot
+This website may not be able to function properly due to us utilizing localhost as our server. Here are some screenshots of the websites:
+!(demo)[img/demo.jpeg]
+!(demo2)[img/demo2.jpeg]
+!(demo3)[img/demo3.jpeg]
+!(demo4)[img/demo4.jpeg]
+!(demo5)[img/demo5.jpeg]
+!(demo6)[img/demo6.jpeg]
+
