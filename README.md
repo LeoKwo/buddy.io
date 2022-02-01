@@ -66,10 +66,10 @@ For all functions mentioned above, we believe they are feasible. Java provides a
 
 ## Screenshot
 This website may not be able to function properly due to us utilizing localhost as our server. Here are some screenshots of the websites:
-!(demo)[img/demo.jpeg]
-!(demo2)[img/demo2.jpeg]
-!(demo3)[img/demo3.jpeg]
-!(demo4)[img/demo4.jpeg]
-!(demo5)[img/demo5.jpeg]
-!(demo6)[img/demo6.jpeg]
+!(demo)[img/demo.jpg]
+!(demo2)[img/demo2.jpg]
+!(demo3)[img/demo3.jpg]
+!(demo4)[img/demo4.jpg]
+!(demo5)[img/demo5.jpg]
+!(demo6)[img/demo6.jpg]
 
